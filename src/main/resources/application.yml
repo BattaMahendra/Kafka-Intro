@@ -8,4 +8,5 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
 # before you run this application you need to install Apache Kafka
-#
+# please watch this video to install and run the kafka
+# https://youtu.be/heXd6JA2TQc?si=pxrJJ9tDU0oX9P8b
