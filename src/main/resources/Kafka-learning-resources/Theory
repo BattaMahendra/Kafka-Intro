@@ -1,0 +1,25 @@
+Required Commands:
+
+
+First Go to folder of Kafka in the windows C where ever you installed it
+
+==> Starting zookeeper
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+==> Starting Kafka server
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+==> Creating topic - here we are topic name as test
+.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partition 1 --topic test
+
+
+==> For checking how many topics are up
+.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+
+
+==> Creating producer
+.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic test
+
+
+==> Creating consumer
+.\bin\windows\kafka-console-consumer.bat --topic test --bootstrap-server localhost:9092 --from-beginning
